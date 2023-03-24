@@ -16,6 +16,22 @@
         <activity android:name=".TheFightMjolnir" />
 
         <activity android:name=".MjolnirPage" />
+         <activity
+            android:name=".WebViewActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Add the data element for the URL scheme and host -->
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="example.com" />
+            </intent-filter>
+        </activity>
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
