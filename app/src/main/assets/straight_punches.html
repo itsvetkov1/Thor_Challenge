@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Straight Punches Timer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="excersizes_style.css">
+
+    <script>
+        function countdown() {
+            var seconds = 30;
+            var timer = setInterval(function() {
+                seconds--;
+                if (seconds <= 0) {
+                    clearInterval(timer);
+                    document.getElementById("audio").play();
+                }
+                document.getElementById("timer").innerHTML = seconds;
+            }, 1000);
+            document.getElementById("audio").play();
+        }
+        window.onload = function() {
+            countdown();
+        }
+    </script>
+    <audio id="audio" src="horn.mp3"></audio>
+</head>
+
+<body>
+    <div class="headline">Straight Punches</div>
+    <img class="jumping_jacks" src="straight_punches.gif" loop>
+    <div class="timer">
+        <span id="timer">30</span>
+        <span>seconds left</span>
+    </div>
+</body>
+</html>
