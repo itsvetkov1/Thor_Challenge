@@ -9,9 +9,11 @@
 
     <script>
         function countdown() {
-            var seconds = 31;
+            var seconds = 30;
+            var visibleSeconds = 30;
             var timer = setInterval(function() {
                 seconds--;
+                visibleSeconds--;
 
                 if (seconds === 29) {
                     document.getElementById("audio").play();
@@ -20,11 +22,11 @@
                 if (seconds <= 0) {
                     clearInterval(timer);
                     setTimeout(function() {
-                        window.location.href = "rest.html";
+                        window.location.href = "rest_1_d1.html";
                     }, 1000);
                 }
 
-                document.getElementById("timer").innerHTML = seconds;
+                document.getElementById("timer").innerHTML = visibleSeconds;
             }, 1000);
             document.getElementById("audio").play();
         }
@@ -39,7 +41,7 @@
     <div class="headline">Jumping Jacks</div>
     <img class="jumping_jacks" src="jumping_jacks1.gif" loop>
     <div class="timer">
-        <span id="timer">31</span>
+        <span id="timer">30</span>
         <span>seconds left</span>
     </div>
 </body>
