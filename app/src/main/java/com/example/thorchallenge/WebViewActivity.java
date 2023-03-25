@@ -1,8 +1,9 @@
 package com.example.thorchallenge;
 
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
-import androidx.appcompat.app.AppCompatActivity;
+import android.webkit.WebViewClient;
 
 public class WebViewActivity extends AppCompatActivity {
 
@@ -11,17 +12,17 @@ public class WebViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_web_view);
 
-        // Set the layout for this activity
-        setContentView(R.layout.activity_webview);
+        webView = findViewById(R.id.webView);
+        webView.setWebViewClient(new WebViewClient());
 
-        // Find the WebView component in the layout
-        webView = findViewById(R.id.webview);
+        // Enable JavaScript if necessary
+        webView.getSettings().setJavaScriptEnabled(true);
 
-        // Get the URL of the HTML file to display
-        String url = getIntent().getStringExtra("url");
-
-        // Load the HTML file into the WebView
-        webView.loadUrl(url);
+        String fileUrl = getIntent().getStringExtra("fileUrl");
+        if (fileUrl != null) {
+            webView.loadUrl(fileUrl);
+        }
     }
 }
