@@ -11,16 +11,16 @@
             var seconds = 30;
             var timer = setInterval(function() {
                 seconds--;
-                if (seconds <= 0) {
-                    clearInterval(timer);
+                if (seconds === 29) {
                     document.getElementById("audio").play();
                 }
-                document.getElementById("timer").innerHTML = seconds;
-            }, 1000);
-            document.getElementById("audio").play();
-        }
-        window.onload = function() {
-            countdown();
+
+                if (seconds <= 0) {
+                    clearInterval(timer);
+                    setTimeout(function() {
+                        window.location.href = "rest_3_d1.html";
+                    }, 1000);
+                }
         }
     </script>
     <audio id="audio" src="horn.mp3"></audio>

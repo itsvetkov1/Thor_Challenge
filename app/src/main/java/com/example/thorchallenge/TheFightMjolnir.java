@@ -30,7 +30,7 @@ public class TheFightMjolnir extends AppCompatActivity {
         buttonday1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectTo("jump_jacks.html");
+                redirectTo("jump_jacks_1_d1.html");
             }
         });
 

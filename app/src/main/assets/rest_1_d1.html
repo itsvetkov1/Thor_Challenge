@@ -3,7 +3,7 @@
 <head>
     <title>Rest Timer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="excersizes_style.css">
+    <link rel="stylesheet" type="text/css" href="rest_style.css">
     <style>
         /* Add your other CSS rules here */
         #viking-stopwatch {
@@ -31,7 +31,7 @@
                     clearInterval(timer);
                     document.getElementById("horn-audio").play();
                     setTimeout(function() {
-                        window.location.href = "pushups.html";
+                        window.location.href = "pushups_1_d1.html";
                     }, 2000);
                 }
                 document.getElementById("timer").innerHTML = seconds;
@@ -41,5 +41,6 @@
             countdown();
         }
     </script>
+    <button class="next-button" onclick="window.location.href='pushups_1_d1.html'">Next</button>
 </body>
 </html>
