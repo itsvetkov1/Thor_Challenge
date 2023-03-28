@@ -11,9 +11,8 @@ body {
   padding-top: 1rem;
   padding-bottom: 1rem;
   color: black;
-  background-color: rgba(255, 255, 255, 0.5); /* Added this line to ensure the headline is visible on top of the image */
+  background-color: rgba(255, 255, 255, 0.5);
 }
-
 
 /* Timer */
 .timer {
@@ -38,7 +37,7 @@ body {
 
 /* Jumping Jacks */
 .jumping_jacks {
-  position: absolute; /* Changed from "fixed" to "absolute" */
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -47,7 +46,7 @@ body {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  z-index: -1; /* Added this line to make sure the image is behind the headline */
+  z-index: -1;
 }
 
 /* Headline */
@@ -58,13 +57,12 @@ body {
   margin-top: 20px;
 }
 
-/* Next Button */
-.next-button {
+/* Next Button and Reset Button */
+.next-button, .reset-button {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 0;
   left: 0;
   right: 0;
   height: 80px;
@@ -74,4 +72,9 @@ body {
   border: none;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+/* Position Reset Button */
+.reset-button {
+  bottom: 80px;
 }

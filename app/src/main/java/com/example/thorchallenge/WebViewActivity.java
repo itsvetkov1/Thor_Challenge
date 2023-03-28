@@ -24,5 +24,7 @@ public class WebViewActivity extends AppCompatActivity {
         if (fileUrl != null) {
             webView.loadUrl(fileUrl);
         }
+        webView.clearCache(true);
+
     }
 }
