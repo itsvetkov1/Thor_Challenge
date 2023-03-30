@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rest Timer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="excersizes_style.css">
+
+</head>
+<body>
+    <div class="clock">
+        <img id="viking-stopwatch" src="viking_stopwatch.jpg" alt="Viking Stopwatch">
+    </div>
+    <div class="timer">
+        <span id="timer">30</span>
+        <span>seconds left</span>
+    </div>
+    <audio id="horn-audio" src="horn.mp3"></audio>
+    <script>
+        function countdown() {
+            var seconds = 30;
+            var timer = setInterval(function() {
+                seconds--;
+                if (seconds <= 0) {
+                    clearInterval(timer);
+                    document.getElementById("horn-audio").play();
+                    setTimeout(function() {
+                        window.location.href = "pushups.html";
+                    }, 2000);
+                }
+                document.getElementById("timer").innerHTML = seconds;
+            }, 1000);
+        }
+        window.onload = function() {
+            countdown();
+        }
+    </script>
+    <div class="buttons-container">
+        <button class="next-button" onclick="window.location.href='straight_punches_1_d1.html'">Next</button>
+        <button class="reset-button" onclick="resetTimer()">Reset</button>
+    </div>
+</body>
+</html>
