@@ -7,18 +7,20 @@
 
 </head>
 <body>
-    <div class="clock">
-        <img id="viking-stopwatch" src="viking_stopwatch.jpg" alt="Viking Stopwatch">
-    </div>
-    <div class="timer">
-        <span id="timer">30</span>
-        <span>seconds left</span>
-    </div>
-    <audio id="horn-audio" src="horn.mp3"></audio>
-    <script>
+<div class="clock">
+    <img id="viking-stopwatch" src="viking_stopwatch.jpg" alt="Viking Stopwatch">
+</div>
+<div class="timer">
+    <span id="timer">30</span>
+    <span>seconds left</span>
+</div>
+<audio id="horn-audio" src="horn.mp3"></audio>
+<script>
+        var timer;
+
         function countdown() {
             var seconds = 30;
-            var timer = setInterval(function() {
+            timer = setInterval(function() {
                 seconds--;
                 if (seconds <= 0) {
                     clearInterval(timer);
@@ -30,10 +32,19 @@
                 document.getElementById("timer").innerHTML = seconds;
             }, 1000);
         }
+
+        function resetTimer() {
+            clearInterval(timer);
+            countdown();
+        }
+
         window.onload = function() {
             countdown();
         }
     </script>
+<div class="buttons-container">
     <button class="next-button" onclick="window.location.href='pushups_1_d1.html'">Next</button>
+    <button class="reset-button" onclick="resetTimer()">Reset</button>
+</div>
 </body>
 </html>

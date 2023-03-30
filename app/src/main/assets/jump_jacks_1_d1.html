@@ -33,9 +33,8 @@
             document.getElementById("audio").play();
         }
 
-        function resetTimer() {
-            clearInterval(timer);
-            countdown();
+        function goToNext() {
+            window.location.href = "rest_1_d1.html";
         }
 
         window.onload = function() {
@@ -52,7 +51,9 @@
     <span id="timer">30</span>
     <span>seconds left</span>
 </div>
-<button onclick="resetTimer()">Reset</button>
+<div class="buttons-container">
+    <button class="next-button" onclick="goToNext()">Next</button>
+</div>
 <audio id="audio" src="horn.mp3"></audio>
 </body>
 </html>

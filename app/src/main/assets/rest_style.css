@@ -43,7 +43,7 @@ body {
 }
 
 /* Next Button */
-.next-button {
+.next-button, .reset-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,4 +54,11 @@ body {
   border: none;
   cursor: pointer;
   text-transform: uppercase;
+  width: 50%;
+}
+
+/* Button container */
+.buttons-container {
+  display: flex;
+  width: 100%;
 }

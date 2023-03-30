@@ -1,15 +1,20 @@
 /* General styles */
 body {
   margin: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 /* Headline */
 .headline {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
   color: black;
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -19,15 +24,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: calc(80px * 1);
+  height: calc(80px * 0.8);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  overflow: hidden;
-  font-size: 2.4rem;
+  font-size: 2rem;
+  margin-bottom: 0px;
 }
 
 .timer span {
@@ -37,44 +38,31 @@ body {
 
 /* Jumping Jacks */
 .jumping_jacks {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: calc(80px * 1.2);
-  margin: auto;
   max-width: 100%;
-  max-height: 100%;
+  max-height: calc(100% - 130px);
   object-fit: contain;
-  z-index: -1;
+  margin-bottom: 0px;
 }
 
-/* Headline */
-.headline {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-/* Next Button and Reset Button */
-.next-button, .reset-button {
+/* Next Button and Back Button */
+.next-button, .back-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 80px;
+  height: 50px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  font-size: 2.4rem;
+  font-size: 2rem;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
 }
 
-/* Position Reset Button */
-.reset-button {
-  bottom: 80px;
+/* Buttons container */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: calc(80px * 0.8);
 }
