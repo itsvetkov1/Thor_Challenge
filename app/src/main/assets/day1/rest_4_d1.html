@@ -3,7 +3,7 @@
 <head>
     <title>Rest Timer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="day1/excersizes_style.css">
+    <link rel="stylesheet" type="text/css" href="rest_style.css">
     <style>
         /* Add your other CSS rules here */
         #viking-stopwatch {
@@ -15,13 +15,13 @@
 </head>
 <body>
     <div class="clock">
-        <img id="viking-stopwatch" src="day1/viking_stopwatch.jpg" alt="Viking Stopwatch">
+        <img id="viking-stopwatch" src="viking_stopwatch.jpg" alt="Viking Stopwatch">
     </div>
     <div class="timer">
         <span id="timer">30</span>
         <span>seconds left</span>
     </div>
-    <audio id="horn-audio" src="day1/horn.mp3"></audio>
+    <audio id="horn-audio" src="horn.mp3"></audio>
     <script>
         function countdown() {
             var seconds = 30;
@@ -31,7 +31,7 @@
                     clearInterval(timer);
                     document.getElementById("horn-audio").play();
                     setTimeout(function() {
-                        window.location.href = "day1/pushups.html";
+                        window.location.href = "hip_circles_stretch_5_d1.html";
                     }, 2000);
                 }
                 document.getElementById("timer").innerHTML = seconds;
@@ -41,5 +41,8 @@
             countdown();
         }
     </script>
+    <div class="buttons-container">
+        <button class="next-button" onclick="window.location.href='hip_circles_stretch_5_d1.html'">Next</button>
+        <button class="reset-button" onclick="resetTimer()">Reset</button>
 </body>
 </html>
