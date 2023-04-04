@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jumping Jacks Timer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="excersizes_style.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: content:;">
+
+    <script>
+        var timer;
+
+        function countdown() {
+            var seconds = 30;
+            var visibleSeconds = 30;
+            timer = setInterval(function() {
+                seconds--;
+                visibleSeconds--;
+
+                if (seconds === 29) {
+                    document.getElementById("audio").play();
+                }
+
+                if (seconds <= 0) {
+                    clearInterval(timer);
+                    setTimeout(function() {
+                        window.location.href = "rest_10_d1.html";
+                    }, 1000);
+                }
+
+                document.getElementById("timer").innerHTML = visibleSeconds;
+            }, 1000);
+            document.getElementById("audio").play();
+        }
+
+        function goToNext() {
+            window.location.href = "rest_10_d1.html";
+        }
+
+        window.onload = function() {
+            countdown();
+        }
+    </script>
+
+</head>
+
+<body>
+<div class="headline">Spine Stretch Forward</div>
+<img class="jumping_jacks" src="Spine-Stretch-Forward.gif" loop>
+<div class="timer">
+    <span id="timer">30</span>
+    <span>seconds left</span>
+</div>
+<div class="buttons-container">
+    <button class="next-button" onclick="goToNext()">Next</button>
+    <button class="back-button" onclick="window.location.href='squats_9_d1.html'">Back</button>
+</div>
+<audio id="audio" src="horn.mp3"></audio>
+</body>
+</html>
