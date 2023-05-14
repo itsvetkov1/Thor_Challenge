@@ -4,15 +4,21 @@
     <title>Rest Timer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="rest_style.css">
-
 </head>
 <body>
 <div class="clock">
     <img id="viking-stopwatch" src="viking_stopwatch.jpg" alt="Viking Stopwatch">
 </div>
-<div class="timer">
-    <span id="timer">30</span>
-    <span>seconds left</span>
+<div class="content-wrapper"> <!-- Add this wrapper div -->
+    <div class="rest-text">Rest</div>
+    <div class="timer">
+        <span id="timer">30</span>
+        <span>seconds left</span>
+    </div>
+    <div class="buttons-container">
+        <button class="next-button" onclick="window.location.href='pushups_2_d1.html'">Next</button>
+        <button class="reset-button" onclick="resetTimer()">Reset</button>
+    </div>
 </div>
 <audio id="horn-audio" src="horn.mp3"></audio>
 <script>
@@ -41,10 +47,6 @@
         window.onload = function() {
             countdown();
         }
-    </script>
-<div class="buttons-container">
-    <button class="next-button" onclick="window.location.href='pushups_2_d1.html'">Next</button>
-    <button class="reset-button" onclick="resetTimer()">Reset</button>
-</div>
+</script>
 </body>
 </html>

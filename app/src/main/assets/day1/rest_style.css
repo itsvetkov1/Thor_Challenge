@@ -8,6 +8,15 @@ body {
   height: 100vh;
 }
 
+/* Content wrapper */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
 /* Headline */
 .headline {
   font-size: 3rem;
@@ -24,10 +33,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(80px * 1);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   font-size: 2.4rem;
+  margin-bottom: -10px; /* Reduced margin-bottom */
 }
 
 .timer span {
@@ -50,15 +59,24 @@ body {
   height: 80px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
   width: 50%;
+  margin-bottom: 0px;
 }
 
 /* Button container */
 .buttons-container {
   display: flex;
   width: 100%;
+  margin-top: 5px; /* Reduced margin-top */
+}
+.rest-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0px;
+    color: white;
 }
